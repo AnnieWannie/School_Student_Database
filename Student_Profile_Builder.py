@@ -52,13 +52,15 @@ class Student:
         print(f"\n{self.student_name} has a {round(grade_avg)}% average")
 
     def get_student_course(self, course):
+        course_valid = False
         completed_courses_key_list = list(self.profile["Completed Courses"].keys())
         for i in range (len(self.profile["Completed Courses"])):
             if course.capitalize() == completed_courses_key_list[i]:
                 class_name = completed_courses_key_list[i]
                 class_grade = self.profile["Completed Courses"][course.capitalize()]
                 print(f"\n{self.student_name} has a {class_grade} in {class_name}")
-        else:
+                course_valid = True
+        if course_valid == False:
             print("Invalid course request")
 
 #Declaring an assortment of student objects
