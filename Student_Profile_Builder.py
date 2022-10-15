@@ -1,5 +1,3 @@
-#Anthony Elia - N01515607
-
 import random
 
 #Class constructor for students with an assortment of functions to 
